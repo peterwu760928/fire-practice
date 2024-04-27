@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfire_practice"]=self["webpackChunkfire_practice"]||[]).push([[424],{6424:function(e,r,n){n.r(r),n.d(r,{default:function(){return i}});var u=n(6768);function c(e,r){return(0,u.uX)(),(0,u.CE)("p",null,"Home Page")}var t=n(1241);const a={},f=(0,t.A)(a,[["render",c]]);var i=f}}]);
+//# sourceMappingURL=424.1ca8ef72.js.map
