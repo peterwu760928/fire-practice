@@ -1,0 +1,52 @@
+//vw vh vmax rem
+@function vw($target) {
+	$vw-context: calc((375 * .01) * 1px);
+	@return calc(($target / $vw-context) * 1vw);
+}
+
+@function vmax($target) {
+	$vmax-context: calc((667 * .01) * 1px);
+	@return calc(($target / $vmax-context) * 1vmax);
+}
+
+@function vh($target) {
+	$vh-context: calc((667 * .01) * 1px);
+	@return calc(($target / $vh-context) * 1vh);
+}
+
+@function rem($target) {
+	$rem-context: .0625;
+	@return calc(($target * $rem-context) * 1rem);
+}
+
+@function remText($target) {
+	@return $target;
+  }
+
+//portrait & landscape
+@mixin portrait {
+	@media screen and (orientation: portrait) { @content; }
+}
+
+@mixin landscape {
+	@media screen and (orientation: landscape) and (min-aspect-ratio: 16/9) { @content; }
+}
+
+//color reverse function
+@function color-yiq($color, $dark: #000000, $light: #ffffff) {
+	$r: red($color);
+	$g: green($color);
+	$b: blue($color);
+
+	$yiq: calc((($r * 299) + ($g * 587) + ($b * 114)) / 1000);
+
+	@if ($yiq >= 150) {
+	    @return $dark;
+	} @else {
+	    @return $light;
+    }
+}
+
+@function padfile($black) {
+	@return url('data:image/svg+xml, <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill=" '+$black+' " fill-rule="evenodd"><path d="M3.996 8.008A19.902 19.902 0 0 0 0 20.003c0 11.045 8.952 20 20 20 0 0-13.043-7.544-16.005-31.995m13.584 6.518a4.675 4.675 0 1 1 .005-9.35 4.675 4.675 0 0 1-.005 9.35M20 0C13.454 0 7.644 3.144 3.996 8.005v.003c.093.195 3.776 8.094 13.781 9.102 6.637.669 18.811-8.177 18.811-8.177s-17.592 16.214-16.587 31.07c11.046 0 19.998-8.955 19.998-20C39.999 8.957 31.047 0 20 0"/><path d="M40 20c0 11.046-8.955 20.004-20 20.004-.982-14.52 15.797-30.331 16.563-31.043l.016-.014.002-.005.006-.003.002-.002.091.032A19.883 19.883 0 0 1 40 20"/><path d="M20 40.003c-11.045 0-20-8.955-20-20 0-4.501 1.485-8.654 3.995-11.995C6.96 32.462 20 40.003 20 40.003"/></g></svg>');
+}

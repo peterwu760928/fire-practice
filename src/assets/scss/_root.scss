@@ -1,0 +1,133 @@
+:root {
+	//primary
+	--primary: #007FFC;
+	--primary-sec: #0071E0;
+	--primary-thi: #0064C7;
+	--primary-fou: #e9f4ff;
+
+	//secondary
+    --secondary: #FFA000;
+	--secondary-sec: #E69000;
+	--secondary-thi: #CC8000;
+	--secondary-fou: #FFF2DD;
+
+	//th
+    --thirdly: #FFDE37;
+
+	//base
+	--light: #ffffff;
+	--light-sec: #fafafa;
+	--light-thi: #f5f5f5;
+	--light-fou: #f9f9f9;
+	--light-five: #f4f4f4;
+
+	--dark: #3d3d3d;
+	--dark-sec: #6a6a6a;
+	--dark-thi: #8a8a8a;
+	--dark-fou: #dddddd;
+
+	//support
+	--prompt-info: var(--primary);
+  	--prompt-success: #1CD369;
+  	--prompt-error: #FF2425;
+  	--prompt-warning: var(--secondary);
+	
+	--prompt-info-lighten: #F2F7FF;
+  	--prompt-success-lighten: #E6FFF0;
+  	--prompt-error-lighten: #FFEDED;
+  	--prompt-warning-lighten: #FFF1D9;
+
+	//black & white
+	--color-white: var(--light);
+	--color-black: var(--dark);
+
+	//text
+	--color-title: var(--dark);
+	--color-text: var(--dark-sec);
+	--color-text-lighten: var(--dark-thi);
+	--color-reverse: var(--light);
+	
+	//bg
+	--color-border: var(--dark-fou);
+	--color-primary-bg: var(--light);
+	--color-secondary-bg: var(--light-thi);
+	--color-tertiary-bg: var(--light-fou);
+
+	//favorite
+	--favorite-normal: var(--dark-fou);
+	--favorite-active: var(--secondary);
+
+	//icon
+	--icon-normal: var(--dark-fou);
+	--icon-active: var(--dark);
+
+	//option
+	--color-option-normal: var(--light-five);
+	--color-option-active: var(--secondary-fou);
+
+	//button
+	--color-button-bg: var(--primary-fou);
+	--color-button-text: var(--primary);
+
+	--color-real: var(--primary);
+
+	//mix
+	--a: black;
+	--b: white;
+	--mix-1: color-mix(in srgb, var(--a) 100%, var(--b) 0%);
+	--mix-2: color-mix(in srgb, var(--a) 90%, var(--b) 10%);
+	--mix-3: color-mix(in srgb, var(--a) 80%, var(--b) 20%);
+	--mix-4: color-mix(in srgb, var(--a) 70%, var(--b) 30%);
+	--mix-5: color-mix(in srgb, var(--a) 60%, var(--b) 40%);
+	--mix-6: color-mix(in srgb, var(--a) 50%, var(--b) 50%);
+	--mix-7: color-mix(in srgb, var(--a) 40%, var(--b) 60%);
+	--mix-8: color-mix(in srgb, var(--a) 30%, var(--b) 70%);
+	--mix-9: color-mix(in srgb, var(--a) 20%, var(--b) 80%);
+	--mix-10: color-mix(in srgb, var(--a) 10%, var(--b) 90%);
+}	
+
+[data-mode="dark"] {
+
+	//base dark
+	--light: #ffffff;
+	--light-sec: #fafafa;
+	--light-thi: #f5f5f5;
+	--light-fou: #e5e5e5;
+
+	--dark: #151515;
+	--dark-sec: #303030;
+	--dark-thi: #202020;
+	--dark-fou: #404040;
+
+	//text
+	--color-title: var(--light);
+	--color-text: var(--light-sec);
+	--color-text-lighten: var(--light-thi);
+	--color-reverse: var(--light);
+
+	//bg
+	--color-border: var(--dark-sec);
+	--color-primary-bg: var(--dark-thi);
+	--color-secondary-bg: var(--dark);
+	--color-tertiary-bg: var(--dark-fou);
+
+
+	//favorite
+	--favorite-normal: var(--dark-fou);
+	--favorite-active: var(--secondary);
+
+	//icon
+	--icon-normal: var(--dark-fou);
+	--icon-active: var(--dark);
+
+	//option
+	--color-option-normal: var(--dark-fou);
+	--color-option-active: var(--dark);
+
+	//button
+	--color-button-bg: var(--primary);
+	--color-button-text: var(--color-reverse);
+
+	--color-real: var(--thirdly);
+}
+
